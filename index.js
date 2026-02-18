@@ -66,7 +66,7 @@ app.get('/', async (req, res) => {
       messages.forEach(msg => {
         html += `
           <div class="message">
-            <strong>${msg.name}</strong> <span class="meta">${new Date(msg.created_at).toLocaleString()}</span>
+            <strong>${msg.name}</strong> <span class="meta">${new Date(msg.created_at).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}</span>
             <p>${msg.message}</p>
           </div>
         `;
